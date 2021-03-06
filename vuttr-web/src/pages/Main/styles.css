@@ -1,0 +1,64 @@
+.container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.toolbar {
+  width: 60%;
+}
+h1 {
+  font-size: 42px;
+  font-weight: 600;
+  letter-spacing: 0.72px;
+}
+h4 {
+  margin-top: 10px;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 0.72px;
+}
+.searchInput {
+  width: 403px;
+  height: 50px;
+  background: #F5F4F6 0% 0% no-repeat padding-box;
+  background-image: url(../../assets/icons/Icon-Search-2px.svg);
+  border: 1px solid #EBEAED;
+  border-radius: 5px;
+  padding: 10px 5px 10px 55px;
+  background-position: 15px 15px;
+  background-size: 20px;
+  font-size: 15px;
+  margin: 35px 0;
+}
+.wraperInputs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.search {
+  display: flex;
+  align-items: center;
+}
+.checkboxSearchTags {
+  display: flex;
+  margin-left: 20px;
+  align-items: center;
+}
+.checkboxSearchTags label {
+  margin-left: 10px;
+  font-size: 16px;
+}
+.buttonPrimaryNeutral {
+  background-color: #365DF0;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  transition: 0.6s;
+  margin-right: 15px;
+}
+.buttonPrimaryNeutral:hover {
+  cursor: pointer;
+  background-color: #1b44d6;
+}
