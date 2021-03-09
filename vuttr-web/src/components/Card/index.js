@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
+import { ContextTool } from '../../contexts/ContextTool'
 import './styles.css'
 
-const Card = ({ title, link, description, tags }) => {
+const Card = ({ id, title, link, description, tags }) => {
+  const { handleDeleteModalOpen } = useContext(ContextTool)
+
   return (
     <div>
       <div className="card">
@@ -14,7 +17,10 @@ const Card = ({ title, link, description, tags }) => {
           <a href={link} target="_blank" rel="noreferrer">
             {title}
           </a>
-          <button className="buttonSecondaryDanger">
+          <button
+            className="buttonSecondaryDanger"
+            onClick={() => handleDeleteModalOpen(id)}
+          >
             <FontAwesomeIcon icon={faTrash} /> Remover
           </button>
         </div>
@@ -30,6 +36,7 @@ const Card = ({ title, link, description, tags }) => {
 }
 
 Card.propTypes = {
+  id: PropTypes.number,
   title: PropTypes.string,
   link: PropTypes.string,
   description: PropTypes.string,

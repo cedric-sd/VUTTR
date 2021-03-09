@@ -49,16 +49,3 @@ h4 {
   margin-left: 10px;
   font-size: 16px;
 }
-.buttonPrimaryNeutral {
-  background-color: #365DF0;
-  border-radius: 5px;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  transition: 0.6s;
-  margin-right: 15px;
-}
-.buttonPrimaryNeutral:hover {
-  cursor: pointer;
-  background-color: #1b44d6;
-}

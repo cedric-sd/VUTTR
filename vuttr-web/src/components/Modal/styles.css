@@ -1,0 +1,37 @@
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content {
+  width: 50%;
+  background-color: white;
+  padding: 25px 30px;
+  opacity: 1;
+  border-radius: 5px;
+}
+.inputContainer {
+  padding: 15px 0;
+}
+.input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+.inputDefault {
+  background: #F5F4F6 0% 0% no-repeat padding-box;
+  border: 1px solid #EBEAED;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+.buttonsModal {
+  display: flex;
+  justify-content: flex-end;
+}

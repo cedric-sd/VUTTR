@@ -17,3 +17,29 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.buttonPrimaryNeutral {
+  background-color: #365DF0;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  transition: 0.6s;
+  margin-right: 15px;
+}
+.buttonPrimaryNeutral:hover {
+  cursor: pointer;
+  background-color: #1b44d6;
+}
+.buttonSecondaryDanger {
+  background: #FEEFEE 0% 0% no-repeat padding-box;
+  border-radius: 5px;
+  padding: 10px 20px;
+  border: none;
+  transition: 0.6s;
+  color: #F95E5A;
+  letter-spacing: 0.36px;
+}
+.buttonSecondaryDanger:hover {
+  cursor: pointer;
+  background-color: #FCC6C5;
+}
