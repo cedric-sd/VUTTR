@@ -17,6 +17,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+p {
+  margin: 0;
+  padding: 0;
+}
 .buttonPrimaryNeutral {
   background-color: #365DF0;
   border-radius: 5px;

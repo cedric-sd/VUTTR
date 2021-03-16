@@ -14,6 +14,7 @@ const Main = () => {
   const [link, setLink] = useState('')
   const [description, setDescription] = useState('')
   const [tags, setTags] = useState([])
+
   const {
     listTools,
     isModalDeleteToolOpen,
@@ -22,7 +23,8 @@ const Main = () => {
     handleDeleteTool,
     handleAddToolModalOpen,
     handleAddModalClose,
-    handleAddNewTool
+    handleAddNewTool,
+    handleSearch
   } = useContext(ContextTool)
 
   const newTool = {
@@ -31,8 +33,6 @@ const Main = () => {
     description,
     tags
   }
-
-  // if (error) return <h1>{error}</h1>
 
   return (
     <div className="container">
@@ -44,6 +44,7 @@ const Main = () => {
             <input
               type="text"
               className="searchInput"
+              onChange={handleSearch}
               placeholder="Digite aqui sua pesquisa..."
             />
             <div className="checkboxSearchTags">

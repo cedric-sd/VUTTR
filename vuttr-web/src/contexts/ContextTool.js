@@ -19,9 +19,19 @@ export function ToolProvider({ children }) {
   const [isModalDeleteToolOpen, setIsModalDeleteToolOpen] = useState(false)
   const [isModalAddToolOpen, setIsModalAddToolOpen] = useState(false)
   const [toolToDelete, setToolToDelete] = useState(0)
+  const [searchCustom, setSearchCustom] = useState(url)
+  const [searchedName, setSearchedName] = useState('')
 
-  const responseGetTools = useSWR(url, fetcher)
+  const responseGetTools = useSWR(searchCustom, fetcher)
   const listTools = responseGetTools.data
+
+  async function handleSearch(e) {
+    let inputSearch = e.target.value
+    setSearchedName(inputSearch)
+    //customize default url for list
+    setSearchCustom(`${url}/?q=${inputSearch}`)
+    mutate(url)
+  }
 
   function handleAddToolModalOpen() {
     setIsModalAddToolOpen(true)
@@ -93,7 +103,9 @@ export function ToolProvider({ children }) {
         isModalAddToolOpen,
         handleAddToolModalOpen,
         handleAddModalClose,
-        handleAddNewTool
+        handleAddNewTool,
+        handleSearch,
+        searchedName
       }}
     >
       {children}
